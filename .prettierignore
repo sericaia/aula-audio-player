@@ -49,3 +49,7 @@ _env*
 *.wasm
 *.yml
 *.icns
+
+# custom
+server/db/dev.sqlite3
+server/public/songs
