@@ -4,21 +4,40 @@ import { connect } from 'react-redux';
 import SongList from '../components/SongList';
 import SongSummary from '../components/SongSummary';
 import Player from '../components/Player';
-import { playSong } from '../actions';
+import { playSong, pauseSong, endSong } from '../actions';
+import status from '../constants/playerStatus';
 
-const SongListContainer = ({ songs, player, playSong }) => {
+const SongListContainer = ({ songs, player, playSong, pauseSong, endSong }) => {
   const playingSong = songs.find(song => song.id === player.songId);
+
+  const resumeSong = () => {
+    if (player.status !== status.PAUSED) {
+      return;
+    }
+    playSong(player.songId);
+  };
+
   return (
     <SongList title="Songs">
-      {songs.map(song => (
-        <SongSummary
-          key={song.id}
-          song={song}
-          playSong={playSong}
-          playing={song.id === player.songId}
-        />
-      ))}
-      <Player uri={playingSong ? playingSong.uri : null} autoPlay={true} />
+      {songs.map(song => {
+        const isPlaying =
+          song.id === player.songId && player.status === status.PLAYING;
+        return (
+          <SongSummary
+            key={song.id}
+            song={song}
+            playSong={playSong}
+            isPlaying={isPlaying}
+          />
+        );
+      })}
+      <Player
+        uri={playingSong ? playingSong.uri : null}
+        autoPlay={true}
+        onPlay={resumeSong}
+        onPause={() => pauseSong()}
+        onEnded={() => endSong()}
+      />
     </SongList>
   );
 };
@@ -33,9 +52,11 @@ SongListContainer.propTypes = {
   ).isRequired,
   player: PropTypes.shape({
     songId: PropTypes.number,
-    playing: PropTypes.bool.isRequired
+    status: PropTypes.string.isRequired
   }),
-  playSong: PropTypes.func.isRequired
+  playSong: PropTypes.func.isRequired,
+  pauseSong: PropTypes.func.isRequired,
+  endSong: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -45,5 +66,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { playSong }
+  { playSong, pauseSong, endSong }
 )(SongListContainer);

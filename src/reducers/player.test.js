@@ -1,4 +1,5 @@
 import player from './player';
+import status from '../constants/playerStatus';
 
 describe('player reducer', () => {
   it('should handle PLAY_SONG', () => {
@@ -6,7 +7,7 @@ describe('player reducer', () => {
       player(
         {
           songId: null,
-          playing: false
+          status: status.NONE
         },
         {
           type: 'PLAY_SONG',
@@ -15,7 +16,7 @@ describe('player reducer', () => {
       )
     ).toEqual({
       songId: 1,
-      playing: true
+      status: status.PLAYING
     });
   });
 
@@ -24,15 +25,32 @@ describe('player reducer', () => {
       player(
         {
           songId: 1,
-          playing: true
+          status: status.PLAYING
         },
         {
           type: 'PAUSE_SONG'
         }
       )
     ).toEqual({
+      songId: 1,
+      status: status.PAUSED
+    });
+  });
+
+  it('should handle END_SONG', () => {
+    expect(
+      player(
+        {
+          songId: 1,
+          status: status.PLAYING
+        },
+        {
+          type: 'END_SONG'
+        }
+      )
+    ).toEqual({
       songId: null,
-      playing: false
+      status: status.NONE
     });
   });
 });

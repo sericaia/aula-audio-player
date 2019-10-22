@@ -5,9 +5,9 @@ import ListItem from '@material-ui/core/ListItem';
 import SongItem from './SongItem';
 import Button from '@material-ui/core/Button';
 
-const SongSummary = ({ song, playing, playSong }) => (
+const SongSummary = ({ song, isPlaying, playSong }) => (
   <ListItem>
-    <SongItem song={song} playing={playing} />
+    <SongItem song={song} isPlaying={isPlaying} />
     <Button
       variant="contained"
       color="primary"
@@ -26,7 +26,7 @@ SongSummary.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired
   }).isRequired,
-  playing: PropTypes.bool.isRequired,
+  isPlaying: PropTypes.bool,
   playSong: PropTypes.func.isRequired
 };
 

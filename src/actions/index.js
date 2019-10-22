@@ -22,3 +22,9 @@ export const pauseSong = () => dispatch => {
     type: types.PAUSE_SONG
   });
 };
+
+export const endSong = () => dispatch => {
+  dispatch({
+    type: types.END_SONG
+  });
+};

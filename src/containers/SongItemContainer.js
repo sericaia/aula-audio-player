@@ -3,17 +3,29 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import SongItem from '../components/SongItem';
 import Player from '../components/Player';
-import { playSong } from '../actions';
+import { playSong, pauseSong, endSong } from '../actions';
+import status from '../constants/playerStatus';
 
-const SongItemContainer = ({ songs, player, playSong, match }) => {
+const SongItemContainer = ({
+  songs,
+  player,
+  playSong,
+  pauseSong,
+  endSong,
+  match
+}) => {
   const song = songs.find(song => song.id === Number(match.params.id));
+  const isPlaying =
+    song.id === player.songId && player.status === status.PLAYING;
   return (
     <Fragment>
-      <SongItem song={song} playing={song.id === player.songId} />
+      <SongItem song={song} isPlaying={isPlaying} />
       <Player
         uri={song.uri}
         autoPlay={false}
         onPlay={() => playSong(song.id)}
+        onPause={() => pauseSong()}
+        onEnded={() => endSong()}
       />
     </Fragment>
   );
@@ -29,9 +41,11 @@ SongItemContainer.propTypes = {
   ).isRequired,
   player: PropTypes.shape({
     songId: PropTypes.number,
-    playing: PropTypes.bool.isRequired
+    status: PropTypes.string.isRequired
   }),
   playSong: PropTypes.func.isRequired,
+  pauseSong: PropTypes.func.isRequired,
+  endSong: PropTypes.func.isRequired,
   match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.string.isRequired
@@ -46,5 +60,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { playSong }
+  { playSong, pauseSong, endSong }
 )(SongItemContainer);
