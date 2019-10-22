@@ -31,8 +31,8 @@
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "knex": "^0.19.5",
-    "material-ui-audio-player": "^1.0.6",
     "react": "^16.10.2",
+    "react-audio-player": "^0.11.1",
     "react-dom": "^16.10.2",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
@@ -47,7 +47,8 @@
     "eslint-plugin-react": "^7.16.0",
     "husky": "^3.0.9",
     "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "react-hot-loader": "^4.12.15"
   },
   "husky": {
     "hooks": {
