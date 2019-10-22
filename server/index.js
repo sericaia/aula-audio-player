@@ -1,19 +1,14 @@
+const path = require('path');
 const express = require('express');
 const app = express();
 
-const db = require('./db/knex.js');
+const songs = require('./routes/songs');
 
-app.use(express.static('public'));
-
-app.get('/songs', async function(req, res) {
-  const metadata = await db.select().from('songs');
-
-  res.send(metadata);
-});
+app.use('/songs', songs);
 
 app.use(
   '/songs',
-  express.static('public', {
+  express.static(path.join(__dirname, 'public'), {
     extensions: ['wav']
   })
 );
