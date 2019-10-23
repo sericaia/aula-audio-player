@@ -9,27 +9,18 @@ const initialState = {
 const player = (state = initialState, action) => {
   switch (action.type) {
     case PLAY_SONG: {
-      console.log('PLAY_SONG', {
-        songId: action.id,
-        status: status.PLAYING
-      });
       return {
         songId: action.id,
         status: status.PLAYING
       };
     }
     case PAUSE_SONG: {
-      console.log('PAUSE_SONG', {
-        ...state,
-        status: status.PAUSED
-      });
       return {
         ...state,
         status: status.PAUSED
       };
     }
     case END_SONG: {
-      console.log('END_SONG', initialState);
       return initialState;
     }
     default:
