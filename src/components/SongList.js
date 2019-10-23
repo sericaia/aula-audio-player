@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import List from '@material-ui/core/List';
-import ListSubheader from '@material-ui/core/ListSubheader';
+import { List, ListSubheader } from '@material-ui/core';
 
 const SongsList = ({ title, children }) => (
   <List>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ListItemText from '@material-ui/core/ListItemText';
+import { ListItemText } from '@material-ui/core';
 
 const SongItem = ({ song, isPlaying }) => (
   <ListItemText>

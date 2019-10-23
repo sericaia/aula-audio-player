@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import ListItem from '@material-ui/core/ListItem';
+import { ListItem, Button } from '@material-ui/core';
 import SongItem from './SongItem';
-import Button from '@material-ui/core/Button';
 
 const SongSummary = ({ song, isPlaying, playSong }) => (
   <ListItem>
