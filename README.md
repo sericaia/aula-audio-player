@@ -42,7 +42,9 @@ Examples:
 - Add previous and next buttons to go to the previous and next pages;
 - The [React Audio Player](https://github.com/justinmc/react-audio-player) that is being used to create the player creates a PAUSE event right before the END event, which is unnecessary (creates two updates in the `player` reducer);
 - Contains some tests for the reducers but there are no tests for the components. [react-testing-library](https://github.com/testing-library/react-testing-library) or [enzyme](https://github.com/airbnb/enzyme) could have been used;
-- It might make more sense to have the frond-end organized by feature if the codebase grows
+- It might make more sense to have the frond-end organized by feature if the codebase grows;
+- Heading to `http://localhost:3000/songs/1` will not work as this solution is not server rendered;
+- The UX can be improved as in the list page the user has to press the play button to play a song, but there is no play button on the details page (only the audio player one). In order to start a song in the details page the user has to press the play button from the audio player.
 
 #### Back-end
 
