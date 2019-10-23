@@ -8,7 +8,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "fmt": "prettier --config .prettierrc --write '**/*'",
-    "lint": "eslint . --fix --ext .js"
+    "lint": "eslint . --fix --ext .js",
+    "start:server": "node server/index.js",
+    "db:migrate": "knex migrate:latest --knexfile server/db/knexfile.js"
   },
   "eslintConfig": {
     "extends": "react-app"
