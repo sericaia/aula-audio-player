@@ -10,7 +10,7 @@ Will perform all necessary database migrations.
 
 ### `yarn start:server`
 
-Starts the Express.js server (located in `./server` folder). The server will run by default on port 8080.
+Starts the Express.js server (located in `./server` folder). The server will run by default on port 8080. The Node.js version used was 12.0.0
 
 ### `yarn start`
 

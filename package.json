@@ -12,6 +12,9 @@
     "start:server": "node server/index.js",
     "db:migrate": "knex migrate:latest --knexfile server/db/knexfile.js"
   },
+  "engines": {
+    "node": "12.0.0"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
