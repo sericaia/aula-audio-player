@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to start the project
 
-## Available Scripts
+### `yarn`
 
-In the project directory, you can run:
+Install the modules.
+
+### `yarn db:migrate`
+
+Will perform all necessary database migrations.
+
+### `yarn start:server`
+
+Starts the Express.js server (located in `./server` folder). The server will run by default on port 8080.
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Note: Run this in a different terminal window**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Starts the React.js front-end. The client will run by default on port 3000.
 
-### `yarn test`
+### Go to http://localhost:3000/
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Notes about the back-end
 
-### `yarn build`
+There are two available routes:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `GET /songs` - retrieves all songs metadata. Receives two query parameters:
+  - `page`, which gives the metadata for the songs in the current page taking into account the page size. Defaults to 0.
+  - `pageSize`, which gives the amount of results to be returned (offset). Defaults to 10.
+- `GET /songs/**/*.wav` - retrieves `.wav` files from server/public folder.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Examples:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- http://localhost:8080/songs?page=0
+- http://localhost:8080/songs?page=1&pageSize=5
+- http://localhost:8080/songs/musicradar-80s-heat-samples/AM_80sOrch_130-A.wav
 
-### `yarn eject`
+### Improvements
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Front-end
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Add previous and next buttons to go to the previous and next pages;
+- The [React Audio Player](https://github.com/justinmc/react-audio-player) that is being used to create the player creates a PAUSE event right before the END event, which is unnecessary (creates two updates in the `player` reducer);
+- Contains some tests for the reducers but there are no tests for the components. [react-testing-library](https://github.com/testing-library/react-testing-library) or [enzyme](https://github.com/airbnb/enzyme) could have been used;
+- It might make more sense to have the frond-end organized by feature if the codebase grows
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Back-end
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- The back-end misses a proper way to pass the database connection through the handler(s);
+  - One way to do this is by creating a middleware that sets the database in `app.locals` and is included for every route as `app.use(setupDBMiddleware)`. This allows `db` to be accessed through `app.locals` but I'm not sure if it is the right/default way to do it.
+- The public folder is being exposed in `/songs` endpoint, maybe a better naming could be used here (note that only `.wav` files are exposed);
+- Misses Tests on the back-end.

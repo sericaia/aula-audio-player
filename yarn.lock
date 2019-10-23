@@ -1396,9 +1396,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "12.11.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.2.tgz#75ba3beda30d690b89a5089ca1c6e8e386150b76"
-  integrity sha512-dsfE4BHJkLQW+reOS6b17xhZ/6FB1rB8eRRvO08nn5o+voxf3i74tuyFWNH6djdfgX7Sm5s6LD8t6mJug4dpDw==
+  version "12.11.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.11.5.tgz#6c3c8dc84988aff11fd2a63d7b5fbf39eaaab7b1"
+  integrity sha512-LC8ALj/24PhByn39nr5jnTvpE7MujK8y7LQmV74kHYF5iQ0odCPkMH4IZNZw+cobKfSXqaC8GgegcbIsQpffdA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -2416,9 +2416,9 @@ browserslist@^4.0.0, browserslist@^4.1.1, browserslist@^4.6.0, browserslist@^4.6
     node-releases "^1.1.36"
 
 bser@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/bser/-/bser-2.1.0.tgz#65fc784bf7f87c009b973c12db6546902fa9c7b5"
-  integrity sha512-8zsjWrQkkBoLK6uxASk1nJ2SKv97ltiGDo6A3wA0/yRPz+CwmEyDo0hUrhIuukG2JHpAl3bvFIixw2/3Hi0DOg==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/bser/-/bser-2.1.1.tgz#e6787da20ece9d07998533cfd9de6f5c38f4bc05"
+  integrity sha512-gQxTNE/GAfIIrmHLUE3oJyp5FO6HRBfhjnw4/wMmA63ZGDJnWBmgY/lyQBpnDUkGmAhbSe39tx2d/iTOAfglwQ==
   dependencies:
     node-int64 "^0.4.0"
 
@@ -3418,9 +3418,9 @@ deep-is@~0.1.3:
   integrity sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=
 
 deepmerge@^4.0.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.0.tgz#77a97af6746882cd1ed85d4b925be8cd4120b630"
-  integrity sha512-/pED+kD8V9n15L1lon8DXEiWLQMW4tTiegn1kIWIQ+DBudOkFitz1cfjWQiSeKMPBQOknT3LpueyAmMVJ1Ho2g==
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.1.tgz#018a3e5dfe82b95e35e36a9a29ba15ddb194e40f"
+  integrity sha512-32P7FIV6JKt0hPMFNlWFytzVGpppYHFKdnhFUEMXheWc8Lw4HnHEzJa5yxhaQedDAXv2SI6zD7+UbqnC5k9g9Q==
 
 default-gateway@^4.2.0:
   version "4.2.0"
@@ -3731,9 +3731,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.247, electron-to-chromium@^1.3.284:
-  version "1.3.290"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.290.tgz#a3f345abe4f1fb0a2fedf51193f4f4489bb94a82"
-  integrity sha512-pkKffog2KZ5PPcC8ITNXDpucznLFVVLUS2Us0tBF0Qy9114vzDpgWntvFNE1uYEmMUIrWGFu4rDMHwgQAbNYyQ==
+  version "1.3.292"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.292.tgz#7812fc5138619342f1dd5823df6e9cbb7d2820e9"
+  integrity sha512-hqkem5ANpt6mxVXmhAmlbdG8iicuyM/jEYgmP1tiHPeOLyZoTyGUzrDmJS/xyrrZy9frkW1uQcubicu7f6DS5g==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -3940,9 +3940,9 @@ eslint-plugin-import@2.18.2:
     resolve "^1.11.0"
 
 eslint-plugin-jest@^22.19.0:
-  version "22.19.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.19.0.tgz#0cf90946a8c927d40a2c64458c89bb635d0f2a0b"
-  integrity sha512-4zUc3rh36ds0SXdl2LywT4YWA3zRe8sfLhz8bPp8qQPIKvynTTkNGwmSCMpl5d9QiZE2JxSinGF+WD8yU+O0Lg==
+  version "22.20.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.20.0.tgz#a3c3615c516fcbd20d50dbf395ea37361bd9e3b2"
+  integrity sha512-UwHGXaYprxwd84Wer8H7jZS+5C3LeEaU8VD7NqORY6NmPJrs+9Ugbq3wyjqO3vWtSsDaLar2sqEB8COmOZA4zw==
   dependencies:
     "@typescript-eslint/experimental-utils" "^1.13.0"
 
@@ -7367,9 +7367,9 @@ node-pre-gyp@^0.12.0:
     tar "^4"
 
 node-releases@^1.1.29, node-releases@^1.1.36:
-  version "1.1.36"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.36.tgz#44b7cb8254138e87bdbfa47761d0f825e20900b4"
-  integrity sha512-ggXhX6QGyJSjj3r+6ml2LqqC28XOWmKtpb+a15/Zpr9V3yoNazxJNlcQDS9bYaid5FReEWHEgToH1mwoUceWwg==
+  version "1.1.38"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.38.tgz#d81b365df2936654ba37f509ba2fbe91eff2578b"
+  integrity sha512-/5NZAaOyTj134Oy5Cp/J8mso8OD/D9CSuL+6TOXXsTKO8yjc5e4up75SRPCganCjwFKMj2jbp5tR0dViVdox7g==
   dependencies:
     semver "^6.3.0"
 
@@ -9109,14 +9109,14 @@ react-dev-utils@^9.1.0:
     text-table "0.2.0"
 
 react-dom@^16.10.2:
-  version "16.10.2"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.10.2.tgz#4840bce5409176bc3a1f2bd8cb10b92db452fda6"
-  integrity sha512-kWGDcH3ItJK4+6Pl9DZB16BXYAZyrYQItU4OMy0jAkv5aNqc+mAKb4TpFtAteI6TJZu+9ZlNhaeNQSVQDHJzkw==
+  version "16.11.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.11.0.tgz#7e7c4a5a85a569d565c2462f5d345da2dd849af5"
+  integrity sha512-nrRyIUE1e7j8PaXSPtyRKtz+2y9ubW/ghNgqKFHHAHaeP0fpF5uXR+sq8IMRHC+ZUxw7W9NyCDTBtwWxvkb0iA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.16.2"
+    scheduler "^0.17.0"
 
 react-error-overlay@^6.0.3:
   version "6.0.3"
@@ -9138,9 +9138,9 @@ react-hot-loader@^4.12.15:
     source-map "^0.7.3"
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is@^16.8.6, react-is@^16.9.0:
-  version "16.10.2"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.10.2.tgz#984120fd4d16800e9a738208ab1fba422d23b5ab"
-  integrity sha512-INBT1QEgtcCCgvccr5/86CfD71fw9EPmDxgiJX4I2Ddr6ZsV6iFXsuby+qWJPtmNuMY0zByTsG4468P7nHuNWA==
+  version "16.11.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.11.0.tgz#b85dfecd48ad1ce469ff558a882ca8e8313928fa"
+  integrity sha512-gbBVYR2p8mnriqAwWx9LbuUrShnAuSCNnuPGyc7GJrMVQtPDAh8iLpv7FRuMPFb56KkaVZIYSz1PrjI9q0QPCw==
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
@@ -9260,9 +9260,9 @@ react-transition-group@^4.3.0:
     prop-types "^15.6.2"
 
 react@^16.10.2:
-  version "16.10.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.10.2.tgz#a5ede5cdd5c536f745173c8da47bda64797a4cf0"
-  integrity sha512-MFVIq0DpIhrHFyqLU0S3+4dIcBhhOvBE8bJ/5kHPVOVaGdo0KuiQzpcjCPsf585WvhypqtrMILyoE2th6dT+Lw==
+  version "16.11.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.11.0.tgz#d294545fe62299ccee83363599bf904e4a07fdbb"
+  integrity sha512-M5Y8yITaLmU0ynd0r1Yvfq98Rmll6q8AxaEe88c8e7LxO8fZ2cNgmFt0aGAS9wzf1Ao32NKXtCl+/tVVtkxq6g==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -9777,10 +9777,10 @@ saxes@^3.1.9:
   dependencies:
     xmlchars "^2.1.1"
 
-scheduler@^0.16.2:
-  version "0.16.2"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.16.2.tgz#f74cd9d33eff6fc554edfb79864868e4819132c1"
-  integrity sha512-BqYVWqwz6s1wZMhjFvLfVR5WXP7ZY32M/wYPo04CcuPM7XZEbV2TBNW7Z0UkguPTl0dWMA59VbNXxK6q+pHItg==
+scheduler@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.17.0.tgz#7c9c673e4ec781fac853927916d1c426b6f3ddfe"
+  integrity sha512-7rro8Io3tnCPuY4la/NuI5F2yfESpnfZyT6TtkXnSWVkcu0BCDJ+8gk5ozUaFaxpIyNuWAPXrH0yFcSi28fnDA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
